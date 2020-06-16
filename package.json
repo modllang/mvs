@@ -3,7 +3,7 @@
     "displayName": "modllang",
     "description": "Modllang language support",
     "publisher": "ishidex2",
-    "repository": "https://github.com/modllang/modllang-vscode",
+    "repository": "https://github.com/modllang/mvs",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.43.0"
