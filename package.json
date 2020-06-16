@@ -1,0 +1,27 @@
+{
+    "name": "modllang",
+    "displayName": "modllang",
+    "description": "Modllang language support",
+    "publisher": "ishidex2",
+    "repository": "https://github.com/modllang/modllang-vscode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "modllang",
+            "aliases": ["Modllang", "modllang"],
+            "extensions": [".modl"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "modllang",
+            "scopeName": "main.modl",
+            "path": "./syntaxes/modllang.tmLanguage.json"
+        }]
+    }
+}

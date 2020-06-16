@@ -1,0 +1,81 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Modllang",
+	"patterns": [
+		{
+			"include": "#atomic"
+		}
+	],
+	"repository": {
+		"atomic": {
+			"patterns": [
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"include": "#numbers"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#functions"
+				},
+				{
+					"include": "#ids"
+				},
+				{
+					"include": "directive"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.modl",
+				"match": "\\b(if|else|while|for|return|func)\\b"
+			}, {
+				"name": "keyword",
+				"match": "\\b(let|nil|true|false|self)\\b"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "0x[0-9a-fA-F]+"
+			}, {
+				"name": "constant.numeric",
+				"match": "0b[0-1]+"
+			}, {
+				"name": "constant.numeric",
+				"match": "[0-9]+\\.?[0-9]*"
+			}]
+		},
+		"ids": {
+			"name": "variable",
+			"match": "[a-zA-Z_]+[a-zA-Z_0-9]*"
+		},
+		"functions": {
+			"name": "entity.name.function",
+			"match": "[a-zA-Z_][a-zA-Z_0-9]*(?=[\\s\\t\\n]*\\()"
+		},
+		"strings": {
+			"name": "string.quoted.double.modl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.modl",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line",
+			"match": "\\/\\/.*"
+		}
+	},
+	"scopeName": "main.modl"
+}
