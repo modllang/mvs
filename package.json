@@ -4,7 +4,7 @@
     "description": "Modllang language support",
     "publisher": "ishidex2",
     "repository": "https://github.com/modllang/mvs",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.43.0"
     },
